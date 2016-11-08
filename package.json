@@ -1,0 +1,17 @@
+{
+  "name": "canyon",
+  "version": "1.0.0",
+  "description": "biking",
+  "main": "canyon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "roman samec",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "node-notifier": "^4.6.1",
+    "request": "^2.78.0",
+    "request-promise": "^4.1.1"
+  }
+}
