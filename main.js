@@ -4,7 +4,7 @@ var request = require('request-promise');
 
 //URL parameters
 var CANYON_URL = "https://www.canyon.com/factory-outlet/ajax/articles.html?category=mtb&type=html";
-var PROXY_URL = "http://emea-proxy.uk.oracle.com:80";
+//var PROXY_URL = "http://emea-proxy.uk.oracle.com:80";
 
 var TIMEOUT_INTERVAL = 3600 * 1000 // 1 hour;
 
@@ -33,7 +33,8 @@ function parseAndSearchBikesFromFactoryOutlet(body) {
 
 async function main() {  
     console.log("Requesting " + CANYON_URL);
-    var body = await request.get({'url':CANYON_URL,'proxy':PROXY_URL});
+    var body = await request.get({'url':CANYON_URL});
+    //var body = await request.get({'url':CANYON_URL,'proxy':PROXY_URL});
     
     var bikes = parseAndSearchBikesFromFactoryOutlet(body);
     console.log(bikes.length === 0?"No bikes found.": bikes.length + " bikes found.")
